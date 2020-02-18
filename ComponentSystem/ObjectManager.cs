@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
+
 namespace ComponentSystem
 {
     public class ObjectManager
     {
         private static ObjectManager Instance;
+
         List<GameObject> gameObjects = new List<GameObject>();
         private ObjectManager()
         {
