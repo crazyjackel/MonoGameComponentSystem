@@ -28,6 +28,7 @@ namespace ComponentSystem
         {
             // TODO: Add your initialization logic here
 
+
             base.Initialize();
         }
 
@@ -63,6 +64,8 @@ namespace ComponentSystem
                 Exit();
 
             // TODO: Add your update logic here
+            ObjectManager.GetInstance().Update();
+
 
             base.Update(gameTime);
         }
@@ -75,7 +78,13 @@ namespace ComponentSystem
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
+
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+
+            ObjectManager.GetInstance().Draw(spriteBatch);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
